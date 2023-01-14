@@ -9,8 +9,11 @@ public class Main {
             if(seatNumber>8){
                 int resultSeat = seatNumber % 8;
                 SeatFinder(resultSeat);
-            }
-            else
+
+            } else if (seatNumber<=6){
+                SeatFinder(seatNumber % 3);
+
+            } else
                 SeatFinder(seatNumber);
             System.out.println("Thank You for using");
         }
@@ -31,13 +34,7 @@ public class Main {
             case 3:
                 SeatPosition("Upper Berth");
                 break;
-            case 4:
-                SeatPosition("Lower Berth");
-                break;
-            case 5:
-                SeatPosition("Middle Berth");
-                break;
-            case 6:
+            case 0:
                 SeatPosition("Upper Berth");
                 break;
             case 7:
